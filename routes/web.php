@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,3 +13,6 @@ Route::post('action-login',  [\App\Http\Controllers\LoginController::class, 'act
 
 // route dashboard
 Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'index']);
+
+// route profile
+Route::resource('profile', ProfileController::class);
